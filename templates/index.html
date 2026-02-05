@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 class="text-center mb-4">Employee Management System</h2>
+
+<form method="POST" action="/add" class="row g-3 mb-4">
+    <div class="col-lg-4 col-md-6 col-12">
+        <input type="text" name="name" class="form-control" placeholder="Employee Name" required>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-12">
+        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-12">
+        <input type="number" name="salary" class="form-control" placeholder="Salary" required>
+    </div>
+
+    <div class="col-lg-1 col-md-6 col-12 d-grid">
+        <button class="btn btn-success">Add</button>
+    </div>
+</form>
+
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th><th>Name</th><th>Email</th><th>Salary</th><th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in employees %}
+            <tr>
+                <td>{{ emp.id }}</td>
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.email }}</td>
+                <td>₹ {{ emp.salary }}</td>
+                <td class="action-btns">
+                    <a href="/update/{{ emp.id }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/delete/{{ emp.id }}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
