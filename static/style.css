@@ -1,69 +1,31 @@
 body {
     background: linear-gradient(120deg, #f6f9fc, #eef2f7);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-/* Main Card */
 .card {
     border: none;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    background: white;
 }
 
-/* Headings */
 h2, h3 {
     font-weight: 700;
     color: #2c3e50;
 }
 
-/* Inputs */
 .form-control {
     border-radius: 10px;
-    padding: 10px 14px;
-    border: 1px solid #dcdde1;
 }
 
-.form-control:focus {
-    border-color: #6c5ce7;
-    box-shadow: 0 0 0 0.15rem rgba(108, 92, 231, 0.25);
-}
-
-/* Buttons */
 .btn {
     border-radius: 10px;
     font-weight: 600;
-    transition: all 0.3s ease;
 }
 
 .btn-success {
     background: #6c5ce7;
     border: none;
-}
-.btn-success:hover {
-    background: #5a4fdc;
-}
-
-.btn-warning {
-    background: #fdcb6e;
-    border: none;
-    color: #2d3436;
-}
-
-.btn-danger {
-    background: #ff7675;
-    border: none;
-}
-
-.btn-primary {
-    background: #0984e3;
-    border: none;
-}
-
-/* Table */
-.table {
-    border-radius: 12px;
-    overflow: hidden;
 }
 
 .table thead {
@@ -71,33 +33,17 @@ h2, h3 {
     color: white;
 }
 
-.table td, .table th {
-    vertical-align: middle;
-}
-
-/* Action buttons */
 .action-btns a {
     margin-right: 6px;
 }
 
-/* Footer text */
 .footer {
     text-align: center;
     font-size: 14px;
     color: #636e72;
-    margin-top: 20px;
 }
-/* Mobile adjustments */
+
 @media (max-width: 768px) {
-    h2, h3 {
-        font-size: 1.4rem;
-        text-align: center;
-    }
-
-    .card {
-        padding: 20px !important;
-    }
-
     .btn {
         width: 100%;
         margin-bottom: 6px;
