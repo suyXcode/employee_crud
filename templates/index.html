@@ -21,7 +21,6 @@
     </div>
 </form>
 
-
 <div class="table-responsive">
     <table class="table table-hover">
         <thead>
@@ -38,13 +37,13 @@
                 <td>₹ {{ emp.salary }}</td>
                 <td class="action-btns">
                     <a href="/update/{{ emp.id }}" class="btn btn-warning btn-sm">Edit</a>
-                    <a href="/delete/{{ emp.id }}" class="btn btn-danger btn-sm">Delete</a>
+                    <a href="/delete/{{ emp.id }}" class="btn btn-danger btn-sm"
+                       onclick="return confirm('Delete this employee?')">Delete</a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
-
 
 {% endblock %}
